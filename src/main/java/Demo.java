@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Manager {
+public class Demo {
 
     public static void main(String[] args) {
         List<Vehicle> vehicleListClient1 = new ArrayList<>();
