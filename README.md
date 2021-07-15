@@ -13,16 +13,16 @@ Main project methods are stored in Rental class:
 5. findMostExpensiveVehicle - method displays model name of the most expensive vehicle by providing to method list of all vehicles (borrowed and free).
 5. findCheapestVehicle - method displays model name of the cheapest vehicle by providing to method list of all vehicles (borrowed and free).
 
-### 2. Demo
+### 3. Demo
 You can use already prepared methods usages with provided data in Demo class. You can modify data or prepare own by creating objects of clients and adding them to client list and by creating vehicles and adding them to all vehicle list (borrowed and free). Additionally, you can assign some rentals by adding vehicles to vehicle list in Client object (vehicleList).
 In order to launch demo run main method in Demo class.
 
-### 3. Requirements
+### 4. Requirements
 Technologies used in project:
 ```bash
 1) Java 11
 2) Gradle 6.8
 ```
 
-### 4. Troubleshooting
+### 5. Troubleshooting
 If you encounter any problems regarding operation, please let me know. 
