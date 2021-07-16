@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Client {
     private int id;
@@ -14,6 +15,9 @@ public class Client {
         this.lastname = lastname;
         this.phone = phone;
         this.vehicleList = vehicleList;
+    }
+    public Client() {
+
     }
 
     @Override
@@ -45,5 +49,29 @@ public class Client {
 
     public List<Vehicle> getVehicleList() {
         return vehicleList;
+    }
+
+    public List<Client> findClientByPhone(int phoneNumber, List<Client> clientList) {
+        return clientList.stream()
+                .filter(i -> i.getPhone()==phoneNumber)
+                .collect(Collectors.toList());
+    }
+
+    public List<Client> findClientWithTheMostRentals(List<Client> clientList) {
+        int maxValue = 0;
+        if (clientList.size() > 0) {
+            for (Client client : clientList) {
+                if (client.getVehicleList().size() >= maxValue) {
+                    maxValue = client.getVehicleList().size();
+                }
+            }
+        }
+
+        int finalMaxValue = maxValue;
+        List<Client> list = clientList.stream()
+                .filter(s -> s.getVehicleList().size() == finalMaxValue)
+                .collect(Collectors.toList());
+        System.out.println(list);
+        return list;
     }
 }
